@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+  }
+
+  /* Theme-specific styles */
+  .theme-hello-kitty {
+    @apply bg-gradient-to-br from-pink-50 to-pink-100;
+  }
+
+  .theme-hello-kitty .card {
+    @apply bg-gradient-to-br from-white to-pink-50 border-pink-200;
+  }
+
+  .theme-pokemon {
+    @apply bg-gradient-to-br from-blue-50 to-yellow-50;
+  }
+
+  .theme-pokemon .card {
+    @apply bg-gradient-to-br from-white to-yellow-50 border-yellow-400;
+  }
+}
